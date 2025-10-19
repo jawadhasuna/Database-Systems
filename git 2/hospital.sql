@@ -1,0 +1,25 @@
+CREATE DATABASE HospitalDB;
+USE HospitalDB;
+CREATE TABLE Patients(
+patient_id INT PRIMARY KEY,
+name VARCHAR(50),
+disease VARCHAR(50),
+age INT NOT NULL
+);
+CREATE TABLE Doctors(
+doctor_id INT PRIMARY KEY,
+name VARCHAR(50),
+specialization VARCHAR(50),
+phone VARCHAR(15)
+);
+INSERT INTO Patients values(001,'ALI','FLU',21);
+INSERT INTO Patients values(002,'USMAN','FEVER',22);
+INSERT INTO Patients values(003,'SHAN','COVID',23);
+INSERT INTO Patients values(004,'FARAZ','INFECTION',24);
+INSERT INTO Patients values(005,'TALHA','HEADACHE',25);
+INSERT INTO Doctors values(001,'DR.AHMED','ENT',03365277654);
+INSERT INTO Doctors values(002,'DR.SHAYAN','HEART',03365288657);
+INSERT INTO Doctors values(003,'DR.AYAN','BRAIN',03365244649);
+
+SELECT* FROM Patients;
+SELECT* FROM Doctors;
