@@ -1,0 +1,29 @@
+CREATE DATABASE TECH;
+USE TECH;
+CREATE TABLE EMPLOYEE(
+EMPLOYEEID INT PRIMARY KEY ,
+NAME VARCHAR(50),
+DEPARTMENT VARCHAR(50),
+JOBTITLE VARCHAR(50),
+SALARY DECIMAL(10,2),
+CITY VARCHAR(50),
+JOINNING DATE
+);
+INSERT INTO EMPLOYEE VALUES
+(1, 'Ali Khan', 'HR', 'HR Manager', 75000, 'Islamabad', '2020-03-01'),
+ (2, 'Sara Ahmed', 'IT', 'Developer', 90000, 'Lahore', '2021-06-15'),
+ (3, 'Ahmed Raza', 'IT', 'Developer', 85000, 'Karachi', '2021-08-20'),
+ (4, 'Hina Malik', 'Finance', 'Accountant', 65000, 'Islamabad', '2020-01-05'),
+ (5, 'Bilal Arif', 'HR', 'Recruiter', 55000, 'Lahore', '2022-02-10'),
+ (6, 'Ayesha Noor', 'IT', 'Project Manager', 120000, 'Islamabad', '2019-07-19'),
+ (7, 'Farhan Ali', 'Finance', 'Accountant', 64000, 'Karachi', '2022-09-01'),
+ (8, 'Sana Tariq', 'IT', 'Developer', 88000, 'Lahore', '2023-03-25'),
+ (9, 'Usman Haq', 'Sales', 'Sales Executive', 60000, 'Karachi', '2021-04-10'),
+ (10, 'Zainab Iqbal', 'Sales', 'Sales Executive', 62000, 'Lahore', '2022-07-18');
+ SELECT DISTINCT JOBTITLE FROM EMPLOYEE; 
+ SELECT NAME FROM EMPLOYEE ORDER BY NAME ASC;
+ SELECT NAME,DEPARTMENT,SALARY FROM EMPLOYEE ORDER BY DEPARTMENT ASC, SALARY DESC;
+ SELECT DISTINCT DEPARTMENT,CITY FROM EMPLOYEE;
+ SELECT COUNT(NAME) AS NUMBOFEMP,JOBTITLE FROM EMPLOYEE GROUP BY JOBTITLE;
+ SELECT COUNT(NAME),CITY FROM EMPLOYEE GROUP BY CITY;
+ SELECT * FROM EMPLOYEE ORDER BY JOINNING ASC;
